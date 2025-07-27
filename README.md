@@ -121,4 +121,6 @@ cd riscv_toolchain
 | `mkdir -p riscv_toolchain` | Make Directory (if not exists) | Creates a folder called `riscv_toolchain` without error if it already exists. |
 | `cd riscv_toolchain`  | Enter Directory               | Navigates into the newly created `riscv_toolchain` folder.      |
 
+
+
 ---
