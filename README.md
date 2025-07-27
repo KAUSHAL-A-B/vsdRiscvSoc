@@ -114,6 +114,7 @@ pwd=$PWD
 mkdir -p riscv_toolchain
 cd riscv_toolchain
 ```
+## 🧾 Command Breakdown
 | Command               | Meaning                       | Purpose                                                        |
 |-----------------------|-------------------------------|----------------------------------------------------------------|
 | `cd`                  | Change Directory              | Moves to the home directory (default location when no path is given). |
@@ -144,3 +145,42 @@ cd riscv_toolchain
 
 ---
 
+## 🎯 Task 3 — Get a prebuilt RISC‑V GCC toolchain
+
+**Why?**
+Provides riscv64-unknown-elf-gcc (newlib) to compile bare‑metal/user‑space RISC‑V
+programs. Using a prebuilt toolchain avoids a long source build.
+
+### 📦 Req Commands
+
+```bash
+wget "https://static.dev.sifive.com/dev-tools/riscv64-unknown-elf-gcc8.3.0-2019.08.0-x86_64-linux-ubuntu14.tar.gz"
+tar -xvzf riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linuxubuntu14.tar.gz
+```
+## 🧾 Command Breakdown
+| Command                                                                 | Meaning                         | Purpose                                                                                          |
+|-------------------------------------------------------------------------|----------------------------------|--------------------------------------------------------------------------------------------------|
+| `wget "https://...tar.gz"`                                              | Web Get                          | Downloads the RISC-V GCC toolchain archive from the specified URL.                              |
+| `tar -xvzf riscv64-unknown-elf-gcc8.3.0-2019.08.0-x86_64-linux-ubuntu14.tar.gz` | Extract Compressed Archive       | Unpacks the `.tar.gz` file into the current directory so you can use the toolchain.             |
+
+
+# 🟥 PERFORMING TASK 2:
+
+## ✅ Goal
+
+Get a prebuilt RISC‑V GCC toolchain.
+
+---
+
+## Executing the Commands:
+
+```bash
+wget "https://static.dev.sifive.com/dev-tools/riscv64-unknown-elf-gcc8.3.0-2019.08.0-x86_64-linux-ubuntu14.tar.gz"
+tar -xvzf riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linuxubuntu14.tar.gz
+```
+---
+# 🔴 OUTPUT:
+
+<img width="494" height="92" alt="image" src="https://github.com/user-attachments/assets/021dda95-c871-4646-8718-f3a0223ba4d5" />
+
+---
