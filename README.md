@@ -67,7 +67,7 @@ Install essential RISC-V development tools using `apt-get` on Ubuntu running ins
 
 ---
 
-## 🛠️ Step 1: Executing the Installation Command
+## 🛠️ Executing the Installation Command
 
 Installation command:
 
