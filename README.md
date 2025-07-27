@@ -58,34 +58,44 @@ texinfo gperf libtool patchutils bc zlib1g-dev libexpat1-dev gtkwave
 
 ---
 
-📦 Command Executed:
+
+# 📁Tool Installation & Execution Log
+
+## ✅ Goal
+
+Install essential RISC-V development tools using `apt-get` on Ubuntu running inside a VirtualBox VM. These tools are system-wide utilities used for compilation, simulation, and debugging.
+
+---
+
+## 🛠️ Step 1: Executing the Installation Command
+
+Installation command:
+
 ```bash
 sudo apt-get install -y git vim autoconf automake autotools-dev curl \
 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex \
 texinfo gperf libtool patchutils bc zlib1g-dev libexpat1-dev gtkwave
 ```
-💡 Summary
-Most packages were already installed and up to date, including:
 
-git, vim, autoconf, automake, build-essential, gawk, etc.
 
-The following new packages were installed:
+---
 
-gtkwave: A waveform viewer for digital simulations.
+## 📋 Terminal Output Summary
 
-vim-runtime: Core runtime files for Vim.
+* ✅ Most tools were **already installed** and up to date (e.g., `git`, `vim`, `autoconf`, `gawk`).
+* 📥 The following **new packages** were installed:
 
-libjudydebian1: A dynamic array and associative array library.
+  * `gtkwave`: Waveform viewer for simulation.
+  * `libjudydebian1`: Dependency library.
+  * `libtk8.6`: GUI toolkit needed for GTKWave.
+  * `vim-runtime`: Vim's runtime files.
+  * `vim`: Full version of the Vim text editor.
 
-libtk8.6: Tk GUI toolkit library required by GTKWave.
+> 📦 Total downloaded: **11.9 MB**
+> 💾 Disk space used: **44.7 MB**
 
-🛠️ System Output Highlights
-Total new packages installed: 5
+---
 
-Data downloaded: 11.9 MB
+<img width="1050" height="722" alt="image" src="https://github.com/user-attachments/assets/fb4ee879-8143-4562-9037-8c5e5d6cfb2b" />
+<img width="1050" height="722" alt="image" src="https://github.com/user-attachments/assets/31e73ee3-8873-4170-b05f-e7f4fcc0356f" />
 
-Disk space used: 44.7 MB
-
-Alternatives updated: vim, vi, vimdiff, etc. now point to the newly installed full Vim version.
-
-Triggers processed: System components like man-db, libc-bin, desktop-file-utils, and icon themes were updated accordingly.
