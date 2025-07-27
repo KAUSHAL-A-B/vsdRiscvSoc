@@ -58,4 +58,34 @@ texinfo gperf libtool patchutils bc zlib1g-dev libexpat1-dev gtkwave
 
 ---
 
-Let me know if you want this as a downloadable `.md` file or formatted for a PDF!
+📦 Command Executed:
+```bash
+sudo apt-get install -y git vim autoconf automake autotools-dev curl \
+libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex \
+texinfo gperf libtool patchutils bc zlib1g-dev libexpat1-dev gtkwave
+```
+💡 Summary
+Most packages were already installed and up to date, including:
+
+git, vim, autoconf, automake, build-essential, gawk, etc.
+
+The following new packages were installed:
+
+gtkwave: A waveform viewer for digital simulations.
+
+vim-runtime: Core runtime files for Vim.
+
+libjudydebian1: A dynamic array and associative array library.
+
+libtk8.6: Tk GUI toolkit library required by GTKWave.
+
+🛠️ System Output Highlights
+Total new packages installed: 5
+
+Data downloaded: 11.9 MB
+
+Disk space used: 44.7 MB
+
+Alternatives updated: vim, vi, vimdiff, etc. now point to the newly installed full Vim version.
+
+Triggers processed: System components like man-db, libc-bin, desktop-file-utils, and icon themes were updated accordingly.
