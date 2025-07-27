@@ -10,7 +10,7 @@
 
 ---
 
-## ✅ Task 1 — Install Base Developer Tools
+## 🎯 Task 1 — Install Base Developer Tools
 
 **Why?**
 These are common build prerequisites like compilers, linkers, autotools, and libraries required for building the RISC‑V simulator, proxy kernel, and related tools. `gtkwave` is also included for waveform viewing in digital design flows.
@@ -59,7 +59,7 @@ texinfo gperf libtool patchutils bc zlib1g-dev libexpat1-dev gtkwave
 ---
 
 
-# PERFORMING TASK 1:
+# 🟥 PERFORMING TASK 1:
 
 ## ✅ Goal
 
