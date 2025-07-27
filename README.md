@@ -59,7 +59,7 @@ texinfo gperf libtool patchutils bc zlib1g-dev libexpat1-dev gtkwave
 ---
 
 
-# 📁Tool Installation & Execution Log
+# PERFORMING TASK 1:
 
 ## ✅ Goal
 
