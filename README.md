@@ -99,3 +99,26 @@ texinfo gperf libtool patchutils bc zlib1g-dev libexpat1-dev gtkwave
 <img width="1050" height="722" alt="image" src="https://github.com/user-attachments/assets/fb4ee879-8143-4562-9037-8c5e5d6cfb2b" />
 <img width="1050" height="722" alt="image" src="https://github.com/user-attachments/assets/31e73ee3-8873-4170-b05f-e7f4fcc0356f" />
 
+
+## 🎯 Task 2 — Create a clean workspace and capture your home path
+
+**Why?**
+Keeps everything contained in ~/riscv_toolchain, making it easy to remove, update, or
+archive. Storing $pwd (your home) ensures consistent paths for later steps.
+
+### 📦 Req Commands
+
+```bash
+cd
+pwd=$PWD
+mkdir -p riscv_toolchain
+cd riscv_toolchain
+```
+| Command               | Meaning                       | Purpose                                                        |
+|-----------------------|-------------------------------|----------------------------------------------------------------|
+| `cd`                  | Change Directory              | Moves to the home directory (default location when no path is given). |
+| `pwd=$PWD`            | Store Present Working Directory | Saves the current directory path in a variable named `pwd`.    |
+| `mkdir -p riscv_toolchain` | Make Directory (if not exists) | Creates a folder called `riscv_toolchain` without error if it already exists. |
+| `cd riscv_toolchain`  | Enter Directory               | Navigates into the newly created `riscv_toolchain` folder.      |
+
+---
