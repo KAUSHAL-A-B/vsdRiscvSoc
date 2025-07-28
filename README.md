@@ -284,31 +284,16 @@ sudo make install
 
 ## 🧾 Command Breakdown
 
-+---------------------------------------------------------+---------------------------------------------------------------+
-| Command                                                 | Explanation                                                   |
-+---------------------------------------------------------+---------------------------------------------------------------+
-| cd $pwd/riscv_toolchain                                 | Change to the working directory where toolchain is located.   |
-|                                                         | `$pwd` holds the base directory path.                         |
-+---------------------------------------------------------+---------------------------------------------------------------+
-| git clone https://github.com/riscv/riscv-isa-sim.git    | Clone the official Spike (riscv-isa-sim) GitHub repository.   |
-|                                                         | This brings the source code to your local machine.            |
-+---------------------------------------------------------+---------------------------------------------------------------+
-| cd riscv-isa-sim                                        | Move into the cloned Spike source code directory.             |
-+---------------------------------------------------------+---------------------------------------------------------------+
-| mkdir -p build && cd build                              | Create a separate build directory and move into it.           |
-|                                                         | Keeps build files separate from source code (clean structure).|
-+---------------------------------------------------------+---------------------------------------------------------------+
-| ../configure --prefix=$pwd/riscv_toolchain/             | Configure the build system and set installation path.         |
-| riscv64-unknown-elf-gcc8.3.0-2019.08.0...               | This prefix tells it where to install compiled binaries.      |
-+---------------------------------------------------------+---------------------------------------------------------------+
-| make -j$(nproc)                                         | Compile the code using all available CPU cores.               |
-|                                                         | `$(nproc)` gets the number of CPU threads for faster build.   |
-+---------------------------------------------------------+---------------------------------------------------------------+
-| sudo make install                                       | Install the compiled Spike binaries to the configured path.   |
-|                                                         | `sudo` is needed if installation path needs admin access.     |
-+---------------------------------------------------------+---------------------------------------------------------------+
-
----                                                      |
+| Command                                                                 | Explanation                                                                                          |
+|-------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| cd $pwd/riscv_toolchain                                                 | Navigate to the RISC-V toolchain workspace directory.                                                |
+| git clone https://github.com/riscv/riscv-isa-sim.git                    | Clone the Spike ISA simulator repository from GitHub.                                                |
+| cd riscv-isa-sim                                                        | Enter the cloned directory for Spike.                                                                |
+| mkdir -p build && cd build                                              | Create and enter a `build` directory to keep build files isolated.                                   |
+| ../configure --prefix=$pwd/riscv_toolchain/riscv64-unknown-elf-gcc...  | Configure the build with installation path set to your toolchain directory.                         |
+| make -j$(nproc)                                                         | Compile using all CPU cores (faster build). `$(nproc)` detects number of processors.                |
+| sudo make install                                                       | Install the built binaries into the specified directory (requires sudo for access).                 |
+                                                   |
 
 # 🟥 PERFORMING TASK 5:
 
