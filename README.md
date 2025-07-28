@@ -184,3 +184,41 @@ tar -xvzf riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linuxubuntu14.tar.gz
 <img width="573" height="118" alt="image" src="https://github.com/user-attachments/assets/7b5053db-4bc1-41b6-a7ff-6632d052a72e" />
 
 ---
+
+## 🎯🎯🎯🎯 Task 4 — Add toolchain to your PATH (current shell + persistent)
+
+**Why?**
+Allows riscv64-unknown-elf-gcc and related binaries to be available without typing
+full paths, both now and after you reopen the terminal.
+
+### 📦 Command (current shell):
+
+```bash
+export PATH=$pwd/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-
+2019.08.0-x86_64-linux-ubuntu14/bin:$PATH
+```
+
+### 📦 Command (persistent for new terminals):
+
+```bash
+echo 'export PATH=$HOME/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-
+2019.08.0-x86_64-linux-ubuntu14/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+```
+
+## 🧾 Command Breakdown
+
+| Step | Command                                                                                                                                              | Purpose / Explanation                                                                                                                                              |
+|------|------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1    | `export PATH=$(pwd)/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin:$PATH`                                         | Temporarily adds the RISC-V toolchain's `bin` directory to the `PATH`. Effective only for the current shell session. Use `$(pwd)` for current directory.          |
+| 2    | `echo 'export PATH=$HOME/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin:$PATH' >> ~/.bashrc`                      | Appends the path to `.bashrc` so it's set automatically in all future terminal sessions. `$HOME` points to the user’s home directory.                              |
+| 3    | `source ~/.bashrc`                                                                                                                                   | Reloads `.bashrc` in the current shell so changes take effect immediately without restarting the terminal.                                                         |
+
+
+# 🟥 PERFORMING TASK 4:
+
+# 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
+
+<img width="573" height="118" alt="image" src="https://github.com/user-attachments/assets/7b5053db-4bc1-41b6-a7ff-6632d052a72e" />
+
+---
