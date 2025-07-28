@@ -219,6 +219,7 @@ source ~/.bashrc
 
 # 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
 
-<img width="573" height="118" alt="image" src="https://github.com/user-attachments/assets/7b5053db-4bc1-41b6-a7ff-6632d052a72e" />
+<img width="1197" height="97" alt="image" src="https://github.com/user-attachments/assets/f19500e9-efdf-4fb2-b5ce-a49228121067" />
+
 
 ---
