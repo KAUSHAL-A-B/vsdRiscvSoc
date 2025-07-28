@@ -295,7 +295,7 @@ sudo make install
 | sudo make install                                                       | Install the built binaries into the specified directory (requires sudo for access).                 |
                                                    |
 
-# 🟥 PERFORMING TASK 5:
+# 🟥 PERFORMING TASK 6:
 
 # 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
 
