@@ -10,7 +10,7 @@
 
 ---
 
-## 🎯 Task 1 — Install Base Developer Tools
+## 🎯🎯🎯🎯 Task 1 — Install Base Developer Tools
 
 **Why?**
 These are common build prerequisites like compilers, linkers, autotools, and libraries required for building the RISC‑V simulator, proxy kernel, and related tools. `gtkwave` is also included for waveform viewing in digital design flows.
@@ -100,7 +100,7 @@ texinfo gperf libtool patchutils bc zlib1g-dev libexpat1-dev gtkwave
 <img width="1050" height="722" alt="image" src="https://github.com/user-attachments/assets/31e73ee3-8873-4170-b05f-e7f4fcc0356f" />
 
 
-## 🎯 Task 2 — Create a clean workspace and capture your home path
+## 🎯🎯🎯🎯 Task 2 — Create a clean workspace and capture your home path
 
 **Why?**
 Keeps everything contained in ~/riscv_toolchain, making it easy to remove, update, or
@@ -145,7 +145,7 @@ cd riscv_toolchain
 
 ---
 
-## 🎯 Task 3 — Get a prebuilt RISC‑V GCC toolchain
+## 🎯🎯🎯🎯 Task 3 — Get a prebuilt RISC‑V GCC toolchain
 
 **Why?**
 Provides riscv64-unknown-elf-gcc (newlib) to compile bare‑metal/user‑space RISC‑V
