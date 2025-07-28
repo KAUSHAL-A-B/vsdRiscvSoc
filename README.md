@@ -253,10 +253,63 @@ sudo apt-get install -y device-tree-compiler
 
 # 🟥 PERFORMING TASK 5:
 
-# 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
+# 🔴 OUTPUT AFTER EXECUTING THE COMMAND:
 
 <img width="1185" height="471" alt="image" src="https://github.com/user-attachments/assets/6333c695-af01-47fc-9024-5dabc5d2bd09" />
 
 ---
 
+## 🎯🎯🎯🎯 Task 6 — Build and install Spike (RISC‑V ISA simulator)
+
+**Why?**
+Spike is the reference ISA simulator. You’ll run your compiled RISC‑V ELF on Spike to
+validate correctness. Installing into the same prefix keeps everything together.
+
+### 📦 Command:
+
+```
+cd $pwd/riscv_toolchain
+git clone https://github.com/riscv/riscv-isa-sim.git
+cd riscv-isa-sim
+mkdir -p build && cd build
+../configure --prefix=$pwd/riscv_toolchain/riscv64-unknown-elf-gcc8.3.0-2019.08.0-x86_64-linux-ubuntu14
+make -j$(nproc)
+sudo make install
+```
+
+## 🧾 Command Breakdown
+
++---------------------------------------------------------+---------------------------------------------------------------+
+| Command                                                 | Explanation                                                   |
++---------------------------------------------------------+---------------------------------------------------------------+
+| cd $pwd/riscv_toolchain                                 | Change to the working directory where toolchain is located.   |
+|                                                         | `$pwd` holds the base directory path.                         |
++---------------------------------------------------------+---------------------------------------------------------------+
+| git clone https://github.com/riscv/riscv-isa-sim.git    | Clone the official Spike (riscv-isa-sim) GitHub repository.   |
+|                                                         | This brings the source code to your local machine.            |
++---------------------------------------------------------+---------------------------------------------------------------+
+| cd riscv-isa-sim                                        | Move into the cloned Spike source code directory.             |
++---------------------------------------------------------+---------------------------------------------------------------+
+| mkdir -p build && cd build                              | Create a separate build directory and move into it.           |
+|                                                         | Keeps build files separate from source code (clean structure).|
++---------------------------------------------------------+---------------------------------------------------------------+
+| ../configure --prefix=$pwd/riscv_toolchain/             | Configure the build system and set installation path.         |
+| riscv64-unknown-elf-gcc8.3.0-2019.08.0...               | This prefix tells it where to install compiled binaries.      |
++---------------------------------------------------------+---------------------------------------------------------------+
+| make -j$(nproc)                                         | Compile the code using all available CPU cores.               |
+|                                                         | `$(nproc)` gets the number of CPU threads for faster build.   |
++---------------------------------------------------------+---------------------------------------------------------------+
+| sudo make install                                       | Install the compiled Spike binaries to the configured path.   |
+|                                                         | `sudo` is needed if installation path needs admin access.     |
++---------------------------------------------------------+---------------------------------------------------------------+
+
+---                                                      |
+
+# 🟥 PERFORMING TASK 5:
+
+# 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
+
+<img width="1185" height="471" alt="image" src="https://github.com/user-attachments/assets/6333c695-af01-47fc-9024-5dabc5d2bd09" />
+
+---
 
