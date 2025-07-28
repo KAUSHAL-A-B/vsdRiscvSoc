@@ -299,7 +299,11 @@ sudo make install
 
 # 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
 
-<img width="1185" height="471" alt="image" src="https://github.com/user-attachments/assets/6333c695-af01-47fc-9024-5dabc5d2bd09" />
+<img width="1194" height="723" alt="image" src="https://github.com/user-attachments/assets/891ce3f7-e342-4ece-9096-8eebdce1b7b0" />
+<img width="1190" height="712" alt="image" src="https://github.com/user-attachments/assets/3c1d48aa-e70d-47bf-a64f-aff0ce52554a" />
+<img width="1190" height="712" alt="image" src="https://github.com/user-attachments/assets/56ac31da-e830-437d-8760-c334d3b47be8" />
+<img width="1154" height="236" alt="image" src="https://github.com/user-attachments/assets/3a7daca9-1741-42ea-bb56-ced2a3baaafb" />
+
 
 ---
 
