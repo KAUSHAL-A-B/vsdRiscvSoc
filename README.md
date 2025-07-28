@@ -208,11 +208,16 @@ source ~/.bashrc
 
 ## 🧾 Command Breakdown
 
-| Step | Command                                                                                                                                              | Purpose / Explanation                                                                                                                                              |
-|------|------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1    | `export PATH=$(pwd)/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin:$PATH`                                         | Temporarily adds the RISC-V toolchain's `bin` directory to the `PATH`. Effective only for the current shell session. Use `$(pwd)` for current directory.          |
-| 2    | `echo 'export PATH=$HOME/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin:$PATH' >> ~/.bashrc`                      | Appends the path to `.bashrc` so it's set automatically in all future terminal sessions. `$HOME` points to the user’s home directory.                              |
-| 3    | `source ~/.bashrc`                                                                                                                                   | Reloads `.bashrc` in the current shell so changes take effect immediately without restarting the terminal.                                                         |
+| Command                                                                 | Explanation                                                                                          |
+|-------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| `cd $pwd/riscv_toolchain`                                              | Navigate to your working directory where the RISC-V toolchain is being set up.                      |
+| `git clone https://github.com/riscv/riscv-isa-sim.git`                 | Clone the Spike (RISC-V ISA simulator) source code from the official GitHub repository.             |
+| `cd riscv-isa-sim`                                                     | Enter the cloned `riscv-isa-sim` directory.                                                          |
+| `mkdir -p build && cd build`                                          | Create a `build` directory (if it doesn't exist) and move into it. Keeps build files separate.      |
+| `../configure --prefix=$pwd/riscv_toolchain/riscv64-unknown-elf-gcc8.3.0-2019.08.0-x86_64-linux-ubuntu14` | Configure the build system. `--prefix` tells where to install Spike binaries.                       |
+| `make -j$(nproc)`                                                      | Compile the code using all available CPU cores for faster build. `$(nproc)` auto-detects CPU count. |
+| `sudo make install`                                                    | Install Spike binaries to the given `--prefix` directory. `sudo` is required for system-wide access.|
+                                                       |
 
 
 # 🟥 PERFORMING TASK 4:
