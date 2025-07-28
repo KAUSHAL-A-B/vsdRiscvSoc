@@ -224,3 +224,39 @@ source ~/.bashrc
 <img width="1204" height="706" alt="image" src="https://github.com/user-attachments/assets/0ccf47cf-369f-4e1f-a944-4aae4d8df167" />
 
 ---
+
+## 🎯🎯🎯🎯 Task 5 — Install Device Tree Compiler (DTC)
+
+**Why?**
+Some RISC‑V components expect DTC to be present; it’s a common dependency in
+SoC/simulator flows.
+
+### 📦 Command:
+
+```
+sudo apt-get install -y device-tree-compiler
+```
+
+## 🧾 Command Breakdown
+
+
+| Component                  | Meaning / Function                                                                 |
+|----------------------------|-------------------------------------------------------------------------------------|
+| `sudo`                     | Executes the command with superuser (admin) privileges.                            |
+| `apt-get`                  | Debian/Ubuntu package management tool for installing, updating, and removing packages. |
+| `install`                  | Specifies that a package should be installed.                                      |
+| `-y`                       | Automatically confirms the installation prompts (non-interactive).                |
+| `device-tree-compiler`     | The name of the package to install; provides the `dtc` tool.                      |
+
+---                                                      |
+
+
+# 🟥 PERFORMING TASK 5:
+
+# 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
+
+<img width="1185" height="471" alt="image" src="https://github.com/user-attachments/assets/6333c695-af01-47fc-9024-5dabc5d2bd09" />
+
+---
+
+
