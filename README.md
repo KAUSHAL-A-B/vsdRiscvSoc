@@ -164,7 +164,7 @@ tar -xvzf riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linuxubuntu14.tar.gz
 | `tar -xvzf riscv64-unknown-elf-gcc8.3.0-2019.08.0-x86_64-linux-ubuntu14.tar.gz` | Extract Compressed Archive       | Unpacks the `.tar.gz` file into the current directory so you can use the toolchain.             |
 
 
-# 🟥 PERFORMING TASK 2:
+# 🟥 PERFORMING TASK 3:
 
 ## ✅ Goal
 
@@ -181,6 +181,6 @@ tar -xvzf riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linuxubuntu14.tar.gz
 ---
 # 🔴 OUTPUT:
 
-<img width="494" height="92" alt="image" src="https://github.com/user-attachments/assets/021dda95-c871-4646-8718-f3a0223ba4d5" />
+<img width="573" height="118" alt="image" src="https://github.com/user-attachments/assets/7b5053db-4bc1-41b6-a7ff-6632d052a72e" />
 
 ---
