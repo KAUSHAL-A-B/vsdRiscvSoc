@@ -221,5 +221,6 @@ source ~/.bashrc
 
 <img width="1197" height="97" alt="image" src="https://github.com/user-attachments/assets/f19500e9-efdf-4fb2-b5ce-a49228121067" />
 
+<img width="1204" height="706" alt="image" src="https://github.com/user-attachments/assets/0ccf47cf-369f-4e1f-a944-4aae4d8df167" />
 
 ---
