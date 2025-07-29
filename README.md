@@ -182,7 +182,7 @@ tar -xvzf riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linuxubuntu14.tar.gz
 # 🔴 OUTPUT:
 
 <img width="573" height="118" alt="image" src="https://github.com/user-attachments/assets/7b5053db-4bc1-41b6-a7ff-6632d052a72e" />
-
+<img width="1118" height="333" alt="image" src="https://github.com/user-attachments/assets/37af2f69-b150-44e8-a652-5f11ad8b59ef" />
 ---
 
 ## 🎯🎯🎯🎯 Task 4 — Add toolchain to your PATH (current shell + persistent)
@@ -306,7 +306,5 @@ sudo make install
 <img width="1154" height="236" alt="image" src="https://github.com/user-attachments/assets/3a7daca9-1741-42ea-bb56-ced2a3baaafb" />
 <img width="1113" height="179" alt="image" src="https://github.com/user-attachments/assets/fcdccaf7-5df5-4468-87af-7e10ee1e08c9" />
 <img width="1019" height="360" alt="image" src="https://github.com/user-attachments/assets/44612749-24cf-4feb-89d4-efb0e1437561" />
-<img width="1118" height="333" alt="image" src="https://github.com/user-attachments/assets/10511f73-72ba-467c-9a23-33fddb33f4b7" />
-
 ---
 
