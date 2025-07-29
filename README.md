@@ -308,3 +308,47 @@ sudo make install
 <img width="1019" height="360" alt="image" src="https://github.com/user-attachments/assets/44612749-24cf-4feb-89d4-efb0e1437561" />
 ---
 
+## 🎯🎯🎯🎯 Task 6 — Build and install the RISC‑V Proxy Kernel (riscv-pk)
+
+**Why?**
+pk provides a minimal runtime so you can run newlib ELF binaries under Spike with
+'spike pk ./your_prog'. It bridges your compiled program to the simulator
+
+### 📦 Commands:
+
+```
+cd $pwd/riscv_toolchain
+git clone https://github.com/riscv/riscv-pk.git
+cd riscv-pk
+mkdir -p build && cd build
+../configure --prefix=$pwd/riscv_toolchain/riscv64-unknown-elf-gcc8.3.0-2019.08.0-x86_64-linux-ubuntu14 --host=riscv64-unknown-elf
+make -j$(nproc)
+sudo make install
+
+```
+
+## 🧾 Command Breakdown
+
+| Command                                                                 | Explanation                                                                                          |
+|-------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| cd $pwd/riscv_toolchain                                                 | Navigate to the RISC-V toolchain workspace directory.                                                |
+| git clone https://github.com/riscv/riscv-isa-sim.git                    | Clone the Spike ISA simulator repository from GitHub.                                                |
+| cd riscv-isa-sim                                                        | Enter the cloned directory for Spike.                                                                |
+| mkdir -p build && cd build                                              | Create and enter a `build` directory to keep build files isolated.                                   |
+| ../configure --prefix=$pwd/riscv_toolchain/riscv64-unknown-elf-gcc...  | Configure the build with installation path set to your toolchain directory.                         |
+| make -j$(nproc)                                                         | Compile using all CPU cores (faster build). `$(nproc)` detects number of processors.                |
+| sudo make install                                                       | Install the built binaries into the specified directory (requires sudo for access).                 |
+                                                   |
+
+# 🟥 PERFORMING TASK 6:
+
+# 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
+
+<img width="1194" height="723" alt="image" src="https://github.com/user-attachments/assets/891ce3f7-e342-4ece-9096-8eebdce1b7b0" />
+....
+<img width="1190" height="712" alt="image" src="https://github.com/user-attachments/assets/3c1d48aa-e70d-47bf-a64f-aff0ce52554a" />
+<img width="1190" height="712" alt="image" src="https://github.com/user-attachments/assets/56ac31da-e830-437d-8760-c334d3b47be8" />
+<img width="1154" height="236" alt="image" src="https://github.com/user-attachments/assets/3a7daca9-1741-42ea-bb56-ced2a3baaafb" />
+<img width="1113" height="179" alt="image" src="https://github.com/user-attachments/assets/fcdccaf7-5df5-4468-87af-7e10ee1e08c9" />
+<img width="1019" height="360" alt="image" src="https://github.com/user-attachments/assets/44612749-24cf-4feb-89d4-efb0e1437561" />
+---
