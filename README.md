@@ -329,16 +329,16 @@ sudo make install
 
 ## 🧾 Command Breakdown
 
-| Command                                                                 | Explanation                                                                                          |
-|-------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| cd $pwd/riscv_toolchain                                                 | Navigate to the RISC-V toolchain workspace directory.                                                |
-| git clone https://github.com/riscv/riscv-isa-sim.git                    | Clone the Spike ISA simulator repository from GitHub.                                                |
-| cd riscv-isa-sim                                                        | Enter the cloned directory for Spike.                                                                |
-| mkdir -p build && cd build                                              | Create and enter a `build` directory to keep build files isolated.                                   |
-| ../configure --prefix=$pwd/riscv_toolchain/riscv64-unknown-elf-gcc...  | Configure the build with installation path set to your toolchain directory.                         |
-| make -j$(nproc)                                                         | Compile using all CPU cores (faster build). `$(nproc)` detects number of processors.                |
-| sudo make install                                                       | Install the built binaries into the specified directory (requires sudo for access).                 |
-                                                   |
+| Command                                                                                                                | Explanation                                                                                                                   |
+|------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| cd $pwd/riscv_toolchain                                                                                                | Move to your RISC-V toolchain workspace directory.                                                                            |
+| git clone https://github.com/riscv/riscv-pk.git                                                                        | Clone the RISC-V Proxy Kernel (PK) source code from GitHub.                                                                  |
+| cd riscv-pk                                                                                                            | Enter the `riscv-pk` directory that was just cloned.                                                                          |
+| mkdir -p build && cd build                                                                                            | Create a `build` directory (to keep build files separate from source) and move into it.                                      |
+| ../configure --prefix=$pwd/riscv_toolchain/riscv64-unknown-elf-gcc8.3.0-2019.08.0-x86_64-linux-ubuntu14 --host=riscv64-unknown-elf | Configure the build system with the install location and specify the target architecture (`riscv64-unknown-elf`).            |
+| make -j$(nproc)                                                                                                        | Compile the Proxy Kernel using all available CPU cores (parallel build).                                                     |
+| sudo make install                                                                                                      | Install the compiled binaries to the specified location (requires superuser privileges).                                     |
+
 
 # 🟥 PERFORMING TASK 6:
 
