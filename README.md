@@ -304,7 +304,9 @@ sudo make install
 <img width="1190" height="712" alt="image" src="https://github.com/user-attachments/assets/3c1d48aa-e70d-47bf-a64f-aff0ce52554a" />
 <img width="1190" height="712" alt="image" src="https://github.com/user-attachments/assets/56ac31da-e830-437d-8760-c334d3b47be8" />
 <img width="1154" height="236" alt="image" src="https://github.com/user-attachments/assets/3a7daca9-1741-42ea-bb56-ced2a3baaafb" />
-
+<img width="1113" height="179" alt="image" src="https://github.com/user-attachments/assets/fcdccaf7-5df5-4468-87af-7e10ee1e08c9" />
+<img width="1019" height="360" alt="image" src="https://github.com/user-attachments/assets/44612749-24cf-4feb-89d4-efb0e1437561" />
+<img width="1118" height="333" alt="image" src="https://github.com/user-attachments/assets/10511f73-72ba-467c-9a23-33fddb33f4b7" />
 
 ---
 
