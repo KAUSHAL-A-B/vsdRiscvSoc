@@ -341,7 +341,7 @@ sudo make install
 
 
 # 🟥 PERFORMING TASK 6:
-
+ 
 # 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
 
 <img width="1194" height="723" alt="image" src="https://github.com/user-attachments/assets/891ce3f7-e342-4ece-9096-8eebdce1b7b0" />
