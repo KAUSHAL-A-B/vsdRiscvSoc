@@ -444,5 +444,7 @@ spike pk ./unique_test
  
 # 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
 
-<img width="1197" height="221" alt="image" src="https://github.com/user-attachments/assets/adce5319-bf62-4a24-a60b-b3b9bf38d063" />
+<img width="1197" height="221" alt="image" src="https://github.com/user-attachments/assets/1c3d9ffe-654e-48d6-8441-335f74bbd67e" />
+
+
 
