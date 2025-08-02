@@ -351,3 +351,40 @@ sudo make install
 <img width="1214" height="727" alt="image" src="https://github.com/user-attachments/assets/9afb692d-b380-4e8d-9f83-90b9fc89939e" />
 
 
+## 🎯🎯🎯🎯 Task 8 — Ensure the cross bin directory is in PATH
+
+**Why?**
+Some installs place pk and related utilities into a nested riscv64-unknown-elf/bin.
+Adding this ensures pk is found by 'which pk'.
+
+### 📦 Commands (current shell):
+
+```
+export PATH=$PWD/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-
+2019.08.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/bin:$PATH
+
+```
+### 📦 Commands (persistent):
+
+```
+echo 'export PATH=$HOME/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-
+2019.08.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/bin:$PATH' >>
+~/.bashrc
+source ~/.bashrc
+```
+
+## 🧾 Command Breakdown
+
+| Command                                                                                                                     | Purpose                                                                                          | Notes                                                                                         |
+|-----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| `export PATH=$pwd/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/bin:$PATH` | Temporarily adds the RISC-V toolchain to the current shell's `PATH`.                            | ❌ Incorrect usage — `$pwd` is invalid. Use `$PWD` instead.                                   |
+| `export PATH=$PWD/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/bin:$PATH` | ✅ Correct version — temporarily sets toolchain path for **current session only**.              | Useful for quick testing or one-time builds.                                                  |
+| `echo 'export PATH=$HOME/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/bin:$PATH' >> ~/.bashrc` | Appends the export command to `.bashrc` for permanent availability in future sessions.          | Make sure the path is correct and accessible via `$HOME`.                                     |
+| `source ~/.bashrc`                                                                                                          | Reloads `.bashrc` to apply changes without restarting the terminal.                             | Required after modifying `.bashrc`.                                                           |
+                                    |
+
+
+# 🟥 PERFORMING TASK 8:
+ 
+# 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
+
