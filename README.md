@@ -1,5 +1,5 @@
 
-# 🛠️ Task 1.1 – RISC-V Toolchain Setup & Uniqueness Test
+# 🛠️ Task 1 – RISC-V Toolchain Setup & Uniqueness Test
 
 ## 🧰 Environment Overview
 
@@ -421,4 +421,28 @@ which pk
  
 # 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
 <img width="1199" height="342" alt="image" src="https://github.com/user-attachments/assets/ca3af004-5c6b-4813-9314-2be1c11e90d0" />
+<img width="1195" height="707" alt="image" src="https://github.com/user-attachments/assets/1c3b298b-a855-4c12-9a75-4ff4ef31faa3" />
+<img width="1195" height="707" alt="image" src="https://github.com/user-attachments/assets/b3da497d-10c8-42a5-8eee-53fb90f6d705" />
+
+
+
+## 🎯🎯🎯🎯 Final Deliverable: A Unique C Test (Username & Machine Dependent)
+
+
+### 📦 Commands
+
+```
+riscv64-unknown-elf-gcc -O2 -Wall -march=rv64imac -mabi=lp64 \
+ -DUSERNAME="$(id -un)" -DHOSTNAME="$(hostname -s)" \
+ unique_test.c -o unique_test
+
+spike pk ./unique_test
+```                                          |
+
+
+# 🟥 PERFORMING TASK 10:
+ 
+# 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
+
+<img width="1197" height="221" alt="image" src="https://github.com/user-attachments/assets/adce5319-bf62-4a24-a60b-b3b9bf38d063" />
 
