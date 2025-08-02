@@ -437,12 +437,13 @@ riscv64-unknown-elf-gcc -O2 -Wall -march=rv64imac -mabi=lp64 \
  unique_test.c -o unique_test
 
 spike pk ./unique_test
-```                                          |
+```                                          
 
 
 # 🟥 PERFORMING TASK 10:
  
 # 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
+
 <img width="1197" height="221" alt="image" src="https://github.com/user-attachments/assets/78b3c744-cca9-4174-9069-7b6d4d348528" />
 
 
