@@ -308,7 +308,7 @@ sudo make install
 <img width="1019" height="360" alt="image" src="https://github.com/user-attachments/assets/44612749-24cf-4feb-89d4-efb0e1437561" />
 ---
 
-## 🎯🎯🎯🎯 Task 6 — Build and install the RISC‑V Proxy Kernel (riscv-pk)
+## 🎯🎯🎯🎯 Task 7 — Build and install the RISC‑V Proxy Kernel (riscv-pk)
 
 **Why?**
 pk provides a minimal runtime so you can run newlib ELF binaries under Spike with
@@ -340,15 +340,13 @@ sudo make install
 | sudo make install                                                                                                      | Install the compiled binaries to the specified location (requires superuser privileges).                                     |
 
 
-# 🟥 PERFORMING TASK 6:
+# 🟥 PERFORMING TASK 7:
  
 # 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
 
-<img width="1194" height="723" alt="image" src="https://github.com/user-attachments/assets/891ce3f7-e342-4ece-9096-8eebdce1b7b0" />
-....
-<img width="1190" height="712" alt="image" src="https://github.com/user-attachments/assets/3c1d48aa-e70d-47bf-a64f-aff0ce52554a" />
-<img width="1190" height="712" alt="image" src="https://github.com/user-attachments/assets/56ac31da-e830-437d-8760-c334d3b47be8" />
-<img width="1154" height="236" alt="image" src="https://github.com/user-attachments/assets/3a7daca9-1741-42ea-bb56-ced2a3baaafb" />
-<img width="1113" height="179" alt="image" src="https://github.com/user-attachments/assets/fcdccaf7-5df5-4468-87af-7e10ee1e08c9" />
-<img width="1019" height="360" alt="image" src="https://github.com/user-attachments/assets/44612749-24cf-4feb-89d4-efb0e1437561" />
----
+<img width="1214" height="727" alt="image" src="https://github.com/user-attachments/assets/c79cd085-25ec-41bd-b732-f4a215e207eb" />
+<img width="1214" height="727" alt="image" src="https://github.com/user-attachments/assets/d39bf6ab-8c4d-4c9a-bf17-fc3f667e7b9d" />
+<img width="1214" height="727" alt="image" src="https://github.com/user-attachments/assets/a29bd9a1-41f3-464e-beb8-3247af600682" />
+<img width="1214" height="727" alt="image" src="https://github.com/user-attachments/assets/9afb692d-b380-4e8d-9f83-90b9fc89939e" />
+
+
