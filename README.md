@@ -443,8 +443,8 @@ spike pk ./unique_test
 # 🟥 PERFORMING TASK 10:
  
 # 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
+<img width="1197" height="221" alt="image" src="https://github.com/user-attachments/assets/78b3c744-cca9-4174-9069-7b6d4d348528" />
 
-<img width="1197" height="221" alt="image" src="https://github.com/user-attachments/assets/1c3d9ffe-654e-48d6-8441-335f74bbd67e" />
 
 
 
