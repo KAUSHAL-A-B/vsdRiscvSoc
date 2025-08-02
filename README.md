@@ -357,14 +357,14 @@ sudo make install
 Some installs place pk and related utilities into a nested riscv64-unknown-elf/bin.
 Adding this ensures pk is found by 'which pk'.
 
-### 📦 Commands (current shell):
+### 📦 Command (current shell):
 
 ```
 export PATH=$PWD/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-
 2019.08.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/bin:$PATH
 
 ```
-### 📦 Commands (persistent):
+### 📦 Command (persistent):
 
 ```
 echo 'export PATH=$HOME/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-
@@ -387,4 +387,38 @@ source ~/.bashrc
 # 🟥 PERFORMING TASK 8:
  
 # 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
+
+<img width="956" height="47" alt="image" src="https://github.com/user-attachments/assets/ac20e8fb-642b-491c-b543-f1034ddb211a" />
+
+
+## 🎯🎯🎯🎯 Task 10 — Quick sanity checks
+**Why?**
+Why: Confirms the toolchain and simulator are visible and runnable from your shell.
+
+### 📦 Commands
+
+```
+which riscv64-unknown-elf-gcc
+riscv64-unknown-elf-gcc -v
+which spike
+spike --version || spike -h
+which pk
+
+```
+
+## 🧾 Command Breakdown
+
+| Command                          | Purpose                                                                 | Expected Output / Notes                                                                 |
+|----------------------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| `which riscv64-unknown-elf-gcc` | Shows the full path to the RISC-V GCC compiler binary.                  | Verifies if the toolchain is correctly added to `$PATH`.                                |
+| `riscv64-unknown-elf-gcc -v`    | Displays version and configuration of the RISC-V GCC.                   | Confirms toolchain installation and compiler build details.                             |
+| `which spike`                   | Checks if the `spike` RISC-V simulator is installed and in `$PATH`.     | Returns path like `/usr/local/bin/spike` if properly installed.                         |
+| `spike --version` or `spike -h`| Displays version or help menu of `spike`.                               | If not found, it means `spike` is either not installed or not exported in `$PATH`.      |
+| `which pk`                      | Locates the `pk` (proxy kernel) binary.                                 | Shows path like `/path/to/riscv-pk/build/pk`.                                           |
+
+
+# 🟥 PERFORMING TASK 10:
+ 
+# 🔴 OUTPUT AFTER EXECUTING THE COMMANDS:
+<img width="1199" height="342" alt="image" src="https://github.com/user-attachments/assets/ca3af004-5c6b-4813-9314-2be1c11e90d0" />
 
