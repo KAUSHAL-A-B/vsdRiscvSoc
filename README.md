@@ -1,5 +1,5 @@
 
-# 🛠️ Task 1 – RISC-V Toolchain Setup & Uniqueness Test
+# 🛠️ Task 1 – RISC-V Toolchain Setup & Uniqueness Test ----------------WEEK 1---------------------------------------------
 
 ## 🧰 Environment Overview
 
@@ -449,6 +449,8 @@ spike pk ./unique_test
 
 <img width="948" height="77" alt="image" src="https://github.com/user-attachments/assets/66f770ae-ca30-4355-af10-f42bead50559" />
 <img width="602" height="273" alt="image" src="https://github.com/user-attachments/assets/4a383a81-f140-4809-b830-a5c2ab002e74" />
+
+# ------------------------------------------------------ WEEK 2--------------------------------------------------------------------
 
 | Instruction      | Opcode  | rd  | rs1 | rs2 | funct3 | funct7  | Binary Instruction                    | Description           |
 | ---------------- | ------- | --- | --- | --- | ------ | ------- | ------------------------------------- | --------------------- |
