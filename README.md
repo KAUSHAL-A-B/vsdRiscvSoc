@@ -447,5 +447,15 @@ spike pk ./unique_test
 <img width="1197" height="221" alt="image" src="https://github.com/user-attachments/assets/78b3c744-cca9-4174-9069-7b6d4d348528" />
 
 
+<img width="948" height="77" alt="image" src="https://github.com/user-attachments/assets/66f770ae-ca30-4355-af10-f42bead50559" />
+<img width="602" height="273" alt="image" src="https://github.com/user-attachments/assets/4a383a81-f140-4809-b830-a5c2ab002e74" />
+| Instruction        | Opcode  | rd   | rs1  | rs2  | funct3 | funct7  | Binary Instruction                        | Description                    |
+|--------------------|---------|------|------|------|--------|---------|--------------------------------------------|--------------------------------|
+| add a0, a5, zero   | 0110011 | x10  | x15  | x0   | 000    | 0000000 | 0000000 00000 01111 000 01010 0110011     | x10 = x15 + x0                 |
+| xor a5, a5, a4     | 0110011 | x15  | x15  | x14  | 100    | 0000000 | 0000000 01110 01111 100 01111 0110011     | x15 = x15 ^ x14                |
+| mul a5, s1, a5     | 0110011 | x15  | x9   | x15  | 000    | 0000001 | 0000001 01111 01001 000 01111 0110011     | x15 = x9 * x15                 |
+| addi a5, a5, -1    | 0010011 | x15  | x15  | N/A  | 000    | N/A     | 111111111111 01111 000 01111 0010011      | x15 = x15 + (-1)               |
+| sw a5, -36(s0)     | 0100011 | N/A  | x8   | x15  | 010    | N/A     | 1111110 01111 01000 010 00100 0100011     | MEM[x8 - 36] = x15 (store)     |
+
 
 
