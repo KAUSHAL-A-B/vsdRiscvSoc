@@ -474,21 +474,24 @@ spike pk ./unique_test
 | `slli a5,a5,2`      | 0010011  | x15  | x15  | -    | 001    | 0000000  | funct7[0000000] rs1[1111] shamt[00010] rd[1111] opcode[0010011] | Shift `a5` left by 2 (multiply by 4) |
 
 <img width="1199" height="289" alt="image" src="https://github.com/user-attachments/assets/28449265-553e-4f3b-88dd-c12e133114b7" />
-| Instruction            | Opcode  | rd  | rs1 | rs2 | funct3 | funct7 | Binary                           | Description                |
-| ---------------------- | ------- | --- | --- | --- | ------ | ------ | -------------------------------- | -------------------------- |
-| `addi sp, sp, -64`     | 0010011 | x2  | x2  | -   | 000    | -      | 11111111110000010000000100010011 | sp = sp - 64               |
-| `sd s0, 56(sp)`        | 0100011 | -   | x2  | x8  | 011    | -      | 00111000010001000010001000100011 | Store s0 at sp+56          |
-| `addi s0, sp, 64`      | 0010011 | x8  | x2  | -   | 000    | -      | 00000000010000010000010010010011 | s0 = sp + 64               |
-| `lui a5, %hi(.LC0)`    | 0110111 | x15 | -   | -   | -      | -      | depends on immediate bits        | Load upper immediate to a5 |
-| `ld a5, %lo(.LC0)(a5)` | 0000011 | x15 | x15 | -   | 011    | -      | depends on offset bits           | Load doubleword to a5      |
+| Instruction      | Opcode    | rd  | rs1 | rs2 | funct3 | funct7  | Binary (split)                                                                    | Description                   |
+| ---------------- | --------- | --- | --- | --- | ------ | ------- | --------------------------------------------------------------------------------- | ----------------------------- |
+| `addi sp,sp,-48` | 0010011   | x2  | x2  | -   | 000    | -       | imm\[-48] rs1\[010] funct3\[000] rd\[010] opcode\[0010011]                        | Allocate 48 bytes on stack    |
+| `sd s0,40(sp)`   | 0100011   | -   | x2  | x8  | 011    | -       | imm\[40] rs2\[01000] rs1\[00010] funct3\[011] opcode\[0100011]                    | Save s0 register on stack     |
+| `mv s0,sp`       | 0110011\* | x8  | x2  | x0  | 000    | 0000000 | funct7\[0000000] rs2\[00000] rs1\[00010] funct3\[000] rd\[01000] opcode\[0110011] | Copy sp to s0 (mv is pseudo)  |
+| `andi a5,a0,1`   | 0010011   | x15 | x10 | -   | 111    | -       | imm\[1] rs1\[01010] funct3\[111] rd\[01111] opcode\[0010011]                      | Bitwise AND a0 with 1 into a5 |
+| `srl a5,a5,1`    | 0110011   | x15 | x15 | x0  | 101    | 0000000 | funct7\[0000000] rs2\[00000] rs1\[01111] funct3\[101] rd\[01111] opcode\[0110011] | Logical shift right a5 by 1   |
+
 
 
 <img width="1200" height="327" alt="image" src="https://github.com/user-attachments/assets/59b2ea5c-73ec-4825-8a86-c43205fdd657" />
-| Instruction        | Opcode   | rd   | rs1  | rs2  | funct3 | funct7  | Binary                         | Description                |
-|--------------------|----------|------|------|------|--------|---------|--------------------------------|----------------------------|
-| addi sp, sp, -48   | 0010011  | x2   | x2   | -    | 000    | -       | 11111111110100010000000100010011 | sp = sp - 48              |
-| sd s0, 40(sp)      | 0100011  | -    | x2   | x8   | 011    | -       | 01010000100001000010001000100011 | Store s0 at sp + 40       |
-| addi s0, sp, 48    | 0010011  | x8   | x2   | -    | 000    | -       | 00000000011000010000010010010011 | s0 = sp + 48              |
-| lw a5, -24(s0)     | 0000011  | x15  | x8   | -    | 010    | -       | 11111111100001000010001100000011 | Load word a5 from s0 - 24 |
-| slli a5, a5, 2     | 0010011  | x15  | x15  | -    | 001    | -       | 00000000001011110010001110010011 | Shift a5 left logical by 2|
+
+| Instruction        | Opcode  | rd  | rs1 | rs2 | funct3 | funct7 | Binary (split)                                                | Description                            |
+| ------------------ | ------- | --- | --- | --- | ------ | ------ | ------------------------------------------------------------- | -------------------------------------- |
+| `addi sp,sp,-64`   | 0010011 | x2  | x2  | -   | 000    | -      | imm\[-64] rs1\[010] funct3\[000] rd\[010] opcode\[0010011]    | Allocate 64 bytes on stack             |
+| `sd s0,56(sp)`     | 0100011 | -   | x2  | x8  | 011    | -      | imm\[56] rs2\[1000] rs1\[010] funct3\[011] opcode\[0100011]   | Save s0 register to stack at offset 56 |
+| `addi s0,sp,64`    | 0010011 | x8  | x2  | -   | 000    | -      | imm\[64] rs1\[010] funct3\[000] rd\[1000] opcode\[0010011]    | Set s0 = sp + 64                       |
+| `sd a0,-56(s0)`    | 0100011 | -   | x8  | x10 | 011    | -      | imm\[-56] rs2\[1010] rs1\[1000] funct3\[011] opcode\[0100011] | Save a0 to s0 - 56                     |
+| `lui a5,%hi(.LC1)` | 0110111 | x15 | -   | -   | -      | -      | imm\[upper20] rd\[1111] opcode\[0110111]                      | Load upper immediate for .LC1 address  |
+
 
