@@ -447,10 +447,10 @@ spike pk ./unique_test
 <img width="1197" height="221" alt="image" src="https://github.com/user-attachments/assets/78b3c744-cca9-4174-9069-7b6d4d348528" />
 
 
+# ----------------------------------------- WEEK 2----------------------------------------------
 <img width="948" height="77" alt="image" src="https://github.com/user-attachments/assets/66f770ae-ca30-4355-af10-f42bead50559" />
 <img width="602" height="273" alt="image" src="https://github.com/user-attachments/assets/4a383a81-f140-4809-b830-a5c2ab002e74" />
 
-# ------------------------------------------------------ WEEK 2--------------------------------------------------------------------
 
 | Instruction      | Opcode  | rd  | rs1 | rs2 | funct3 | funct7  | Binary Instruction                    | Description           |
 | ---------------- | ------- | --- | --- | --- | ------ | ------- | ------------------------------------- | --------------------- |
@@ -460,5 +460,16 @@ spike pk ./unique_test
 | `addi a5,a5,-1`  | 0010011 | x15 | x15 | N/A | 000    | N/A     | 1111111 11111 01111 000 01111 0010011 | a5 = a5 - 1           |
 | `sw a5,-36(s0)`  | 0100011 | N/A | x8  | x15 | 010    | N/A     | 1111110 11111 01000 010 11100 0100011 | Mem\[s0-36] = a5      |
 
+<img width="1204" height="38" alt="image" src="https://github.com/user-attachments/assets/00576eb8-88f5-44a3-b0a1-783178779885" />
+<img width="1189" height="273" alt="image" src="https://github.com/user-attachments/assets/04e76131-c75a-4b29-b58a-264194c110d2" />
+### 🧩 Instruction Decoding – `main` function (`max_array.c`)
+
+| Instruction         | Opcode   | rd   | rs1  | rs2  | funct3 | funct7   | Binary (split)         | Description               |
+|---------------------|----------|------|------|------|--------|----------|-------------------------|---------------------------|
+| `addi sp,sp,-64`    | 0010011  | x2   | x2   | -    | 000    | -        | imm[-64] rs1[010] funct3[000] rd[010] opcode[0010011] | Allocate 64 bytes on stack |
+| `sd ra,56(sp)`      | 0100011  | -    | x2   | x1   | 011    | -        | imm[56] rs2[001] rs1[010] funct3[011] opcode[0100011] | Save return address to stack |
+| `ld a1,0(a5)`       | 0000011  | x11  | x15  | -    | 011    | -        | imm[0] rs1[1111] funct3[011] rd[1011] opcode[0000011] | Load 64-bit word into `a1` |
+| `lw a5,-64(s0)`     | 0000011  | x15  | x8   | -    | 010    | -        | imm[-64] rs1[1000] funct3[010] rd[1111] opcode[0000011] | Load 32-bit int into `a5` |
+| `slli a5,a5,2`      | 0010011  | x15  | x15  | -    | 001    | 0000000  | funct7[0000000] rs1[1111] shamt[00010] rd[1111] opcode[0010011] | Shift `a5` left by 2 (multiply by 4) |
 
 
