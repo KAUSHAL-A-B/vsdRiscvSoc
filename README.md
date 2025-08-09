@@ -451,7 +451,7 @@ spike pk ./unique_test
 <img width="948" height="77" alt="image" src="https://github.com/user-attachments/assets/66f770ae-ca30-4355-af10-f42bead50559" />
 <img width="602" height="273" alt="image" src="https://github.com/user-attachments/assets/4a383a81-f140-4809-b830-a5c2ab002e74" />
 
-
+### 🧩 Instruction Decoding – `main` function (`factorial.c`)
 | Instruction      | Opcode  | rd  | rs1 | rs2 | funct3 | funct7  | Binary Instruction                    | Description           |
 | ---------------- | ------- | --- | --- | --- | ------ | ------- | ------------------------------------- | --------------------- |
 | `add a0,a5,zero` | 0110011 | x10 | x15 | x0  | 000    | 0000000 | 0000000 00000 01111 000 01010 0110011 | a0 = a5 + 0 (copy a5) |
@@ -462,6 +462,7 @@ spike pk ./unique_test
 
 <img width="1204" height="38" alt="image" src="https://github.com/user-attachments/assets/00576eb8-88f5-44a3-b0a1-783178779885" />
 <img width="1189" height="273" alt="image" src="https://github.com/user-attachments/assets/04e76131-c75a-4b29-b58a-264194c110d2" />
+
 ### 🧩 Instruction Decoding – `main` function (`max_array.c`)
 
 | Instruction         | Opcode   | rd   | rs1  | rs2  | funct3 | funct7   | Binary (split)         | Description               |
@@ -472,4 +473,21 @@ spike pk ./unique_test
 | `lw a5,-64(s0)`     | 0000011  | x15  | x8   | -    | 010    | -        | imm[-64] rs1[1000] funct3[010] rd[1111] opcode[0000011] | Load 32-bit int into `a5` |
 | `slli a5,a5,2`      | 0010011  | x15  | x15  | -    | 001    | 0000000  | funct7[0000000] rs1[1111] shamt[00010] rd[1111] opcode[0010011] | Shift `a5` left by 2 (multiply by 4) |
 
+<img width="1199" height="289" alt="image" src="https://github.com/user-attachments/assets/28449265-553e-4f3b-88dd-c12e133114b7" />
+| Instruction            | Opcode  | rd  | rs1 | rs2 | funct3 | funct7 | Binary                           | Description                |
+| ---------------------- | ------- | --- | --- | --- | ------ | ------ | -------------------------------- | -------------------------- |
+| `addi sp, sp, -64`     | 0010011 | x2  | x2  | -   | 000    | -      | 11111111110000010000000100010011 | sp = sp - 64               |
+| `sd s0, 56(sp)`        | 0100011 | -   | x2  | x8  | 011    | -      | 00111000010001000010001000100011 | Store s0 at sp+56          |
+| `addi s0, sp, 64`      | 0010011 | x8  | x2  | -   | 000    | -      | 00000000010000010000010010010011 | s0 = sp + 64               |
+| `lui a5, %hi(.LC0)`    | 0110111 | x15 | -   | -   | -      | -      | depends on immediate bits        | Load upper immediate to a5 |
+| `ld a5, %lo(.LC0)(a5)` | 0000011 | x15 | x15 | -   | 011    | -      | depends on offset bits           | Load doubleword to a5      |
 
+
+<img width="1200" height="327" alt="image" src="https://github.com/user-attachments/assets/59b2ea5c-73ec-4825-8a86-c43205fdd657" />
+| Instruction        | Opcode  | rd  | rs1 | rs2 | funct3 | funct7 | Binary                           | Description                |
+| ------------------ | ------- | --- | --- | --- | ------ | ------ | -------------------------------- | -------------------------- |
+| `addi sp, sp, -48` | 0010011 | x2  | x2  | -   | 000    | -      | 11111111110100010000000100010011 | sp = sp - 48               |
+| `sd s0, 40(sp)`    | 0100011 | -   | x2  | x8  | 011    | -      | 01010000100001000010001000100011 | Store s0 at sp+40          |
+| `addi s0, sp, 48`  | 0010011 | x8  | x2  | -   | 000    | -      | 00000000011000010000010010010011 | s0 = sp + 48               |
+| `lw a5, -24(s0)`   | 0000011 | x15 | x8  | -   | 010    | -      | 11111111100001000010001100000011 | Load word a5 from s0-24    |
+| `slli a5, a5, 2`   | 0010011 | x15 | x15 | -   | 001    | -      | 00000000001011110010001110010011 | Shift a5 left logical by 2 |
