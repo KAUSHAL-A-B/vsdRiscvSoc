@@ -474,13 +474,14 @@ spike pk ./unique_test
 | `slli a5,a5,2`      | 0010011  | x15  | x15  | -    | 001    | 0000000  | funct7[0000000] rs1[1111] shamt[00010] rd[1111] opcode[0010011] | Shift `a5` left by 2 (multiply by 4) |
 
 <img width="1199" height="289" alt="image" src="https://github.com/user-attachments/assets/28449265-553e-4f3b-88dd-c12e133114b7" />
-| Instruction      | Opcode    | rd  | rs1 | rs2 | funct3 | funct7  | Binary (split)                                                                    | Description                   |
-| ---------------- | --------- | --- | --- | --- | ------ | ------- | --------------------------------------------------------------------------------- | ----------------------------- |
-| `addi sp,sp,-48` | 0010011   | x2  | x2  | -   | 000    | -       | imm\[-48] rs1\[010] funct3\[000] rd\[010] opcode\[0010011]                        | Allocate 48 bytes on stack    |
-| `sd s0,40(sp)`   | 0100011   | -   | x2  | x8  | 011    | -       | imm\[40] rs2\[01000] rs1\[00010] funct3\[011] opcode\[0100011]                    | Save s0 register on stack     |
-| `mv s0,sp`       | 0110011\* | x8  | x2  | x0  | 000    | 0000000 | funct7\[0000000] rs2\[00000] rs1\[00010] funct3\[000] rd\[01000] opcode\[0110011] | Copy sp to s0 (mv is pseudo)  |
-| `andi a5,a0,1`   | 0010011   | x15 | x10 | -   | 111    | -       | imm\[1] rs1\[01010] funct3\[111] rd\[01111] opcode\[0010011]                      | Bitwise AND a0 with 1 into a5 |
-| `srl a5,a5,1`    | 0110011   | x15 | x15 | x0  | 101    | 0000000 | funct7\[0000000] rs2\[00000] rs1\[01111] funct3\[101] rd\[01111] opcode\[0110011] | Logical shift right a5 by 1   |
+
+| Instruction         | Opcode  | rd  | rs1 | rs2 | funct3 | funct7  | Binary (split)                                                                    | Description                         |
+| ------------------- | ------- | --- | --- | --- | ------ | ------- | --------------------------------------------------------------------------------- | ----------------------------------- |
+| `addi sp,sp,-32`    | 0010011 | x2  | x2  | -   | 000    | -       | imm\[-32] rs1\[00010] funct3\[000] rd\[00010] opcode\[0010011]                    | Allocate 32 bytes on stack          |
+| `sd ra,24(sp)`      | 0100011 | -   | x2  | x1  | 011    | -       | imm\[24] rs2\[00001] rs1\[00010] funct3\[011] opcode\[0100011]                    | Store return address on stack       |
+| `li a5,-1515872256` | 0010011 | x15 | x0  | -   | 000    | -       | imm\[-1515872256] rs1\[00000] funct3\[000] rd\[01111] opcode\[0010011]            | Load immediate into a5              |
+| `sw a5,-20(s0)`     | 0100011 | -   | x8  | x15 | 010    | -       | imm\[-20] rs2\[01111] rs1\[01000] funct3\[010] opcode\[0100011]                   | Store a5 into memory                |
+| `and a5,a4,a5`      | 0110011 | x15 | x9  | x15 | 111    | 0000000 | funct7\[0000000] rs2\[01111] rs1\[01001] funct3\[111] rd\[01111] opcode\[0110011] | Bitwise AND a4 and a5, result in a5 |
 
 
 
