@@ -448,8 +448,6 @@ spike pk ./unique_test
 
 
 # ----------------------------------------- WEEK 2----------------------------------------------
-<img width="948" height="77" alt="image" src="https://github.com/user-attachments/assets/66f770ae-ca30-4355-af10-f42bead50559" />
-<img width="602" height="273" alt="image" src="https://github.com/user-attachments/assets/4a383a81-f140-4809-b830-a5c2ab002e74" />
 
 ### 🧩 Instruction Decoding – `main` function (`factorial.c`)
 | Instruction      | Opcode  | rd  | rs1 | rs2 | funct3 | funct7  | Binary Instruction                    | Description           |
@@ -460,8 +458,6 @@ spike pk ./unique_test
 | `addi a5,a5,-1`  | 0010011 | x15 | x15 | N/A | 000    | N/A     | 1111111 11111 01111 000 01111 0010011 | a5 = a5 - 1           |
 | `sw a5,-36(s0)`  | 0100011 | N/A | x8  | x15 | 010    | N/A     | 1111110 11111 01000 010 11100 0100011 | Mem\[s0-36] = a5      |
 
-<img width="1204" height="38" alt="image" src="https://github.com/user-attachments/assets/00576eb8-88f5-44a3-b0a1-783178779885" />
-<img width="1189" height="273" alt="image" src="https://github.com/user-attachments/assets/04e76131-c75a-4b29-b58a-264194c110d2" />
 
 ### 🧩 Instruction Decoding – `main` function (`max_array.c`)
 
@@ -473,7 +469,6 @@ spike pk ./unique_test
 | `lw a5,-64(s0)`     | 0000011  | x15  | x8   | -    | 010    | -        | imm[-64] rs1[1000] funct3[010] rd[1111] opcode[0000011] | Load 32-bit int into `a5` |
 | `slli a5,a5,2`      | 0010011  | x15  | x15  | -    | 001    | 0000000  | funct7[0000000] rs1[1111] shamt[00010] rd[1111] opcode[0010011] | Shift `a5` left by 2 (multiply by 4) |
 
-<img width="1199" height="289" alt="image" src="https://github.com/user-attachments/assets/28449265-553e-4f3b-88dd-c12e133114b7" />
 
 | Instruction         | Opcode  | rd  | rs1 | rs2 | funct3 | funct7  | Binary (split)                                                                    | Description                         |
 | ------------------- | ------- | --- | --- | --- | ------ | ------- | --------------------------------------------------------------------------------- | ----------------------------------- |
@@ -485,7 +480,6 @@ spike pk ./unique_test
 
 
 
-<img width="1200" height="327" alt="image" src="https://github.com/user-attachments/assets/59b2ea5c-73ec-4825-8a86-c43205fdd657" />
 
 | Instruction       | Opcode   | rd   | rs1  | rs2  | funct3 | funct7  | Binary (split)                                              | Description              |
 |-------------------|----------|------|------|------|--------|---------|--------------------------------------------------------------|--------------------------|
