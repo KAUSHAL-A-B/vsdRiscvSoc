@@ -449,7 +449,7 @@ spike pk ./unique_test
 
 # ----------------------------------------- WEEK 2----------------------------------------------
 
-### 🧩 Instruction Decoding – `main` function (`factorial.c`)
+### 🧩 Instruction Decoding – (`factorial.c`)
 | Instruction      | Opcode  | rd  | rs1 | rs2 | funct3 | funct7  | Binary Instruction                    | Description           |
 | ---------------- | ------- | --- | --- | --- | ------ | ------- | ------------------------------------- | --------------------- |
 | `add a0,a5,zero` | 0110011 | x10 | x15 | x0  | 000    | 0000000 | 0000000 00000 01111 000 01010 0110011 | a0 = a5 + 0 (copy a5) |
@@ -459,7 +459,7 @@ spike pk ./unique_test
 | `sw a5,-36(s0)`  | 0100011 | N/A | x8  | x15 | 010    | N/A     | 1111110 11111 01000 010 11100 0100011 | Mem\[s0-36] = a5      |
 
 
-### 🧩 Instruction Decoding – `main` function (`max_array.c`)
+### 🧩 Instruction Decoding – (`max_array.c`)
 
 | Instruction         | Opcode   | rd   | rs1  | rs2  | funct3 | funct7   | Binary (split)         | Description               |
 |---------------------|----------|------|------|------|--------|----------|-------------------------|---------------------------|
@@ -470,6 +470,7 @@ spike pk ./unique_test
 | `slli a5,a5,2`      | 0010011  | x15  | x15  | -    | 001    | 0000000  | funct7[0000000] rs1[1111] shamt[00010] rd[1111] opcode[0010011] | Shift `a5` left by 2 (multiply by 4) |
 
 
+### 🧩 Instruction Decoding – (`bitops.c`)
 | Instruction         | Opcode  | rd  | rs1 | rs2 | funct3 | funct7  | Binary (split)                                                                    | Description                         |
 | ------------------- | ------- | --- | --- | --- | ------ | ------- | --------------------------------------------------------------------------------- | ----------------------------------- |
 | `addi sp,sp,-32`    | 0010011 | x2  | x2  | -   | 000    | -       | imm\[-32] rs1\[00010] funct3\[000] rd\[00010] opcode\[0010011]                    | Allocate 32 bytes on stack          |
@@ -479,8 +480,7 @@ spike pk ./unique_test
 | `and a5,a4,a5`      | 0110011 | x15 | x9  | x15 | 111    | 0000000 | funct7\[0000000] rs2\[01111] rs1\[01001] funct3\[111] rd\[01111] opcode\[0110011] | Bitwise AND a4 and a5, result in a5 |
 
 
-
-
+### 🧩 Instruction Decoding – (`bubble_sort.c`)
 | Instruction       | Opcode   | rd   | rs1  | rs2  | funct3 | funct7  | Binary (split)                                              | Description              |
 |-------------------|----------|------|------|------|--------|---------|--------------------------------------------------------------|--------------------------|
 | addi sp, sp, -64  | 0010011  | x2   | x2   | —    | 000    | —       | 111111111100 00010 000 00010 0010011                         | sp = sp - 64            |
