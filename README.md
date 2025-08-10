@@ -448,6 +448,18 @@ spike pk ./unique_test
 
 
 # ----------------------------------------- WEEK 2----------------------------------------------
+<img width="1201" height="723" alt="bitops_mian_asm1" src="https://github.com/user-attachments/assets/6f769497-aa52-4357-990e-817eaf7d2f72" />
+<img width="1201" height="723" alt="bitops_main_asm2" src="https://github.com/user-attachments/assets/c09b2efd-494a-4028-a8fe-9acb90532967" />
+<img width="1201" height="723" alt="bubble_sort_output" src="https://github.com/user-attachments/assets/cfba680c-e2fd-4582-826c-3bf6d1703aec" />
+<img width="1201" height="723" alt="bubble_sort_main_asm2" src="https://github.com/user-attachments/assets/6db15c03-e334-40b7-8faf-fd3798a0869d" />
+<img width="1201" height="723" alt="bubble_sort_main_asm1" src="https://github.com/user-attachments/assets/8b9ee17f-316a-4e40-b713-7cdedcc7e98b" />
+<img width="1201" height="723" alt="bitops_output" src="https://github.com/user-attachments/assets/2d5e5949-9472-45fb-901d-8dd0d466fec3" />
+
+<img width="1201" height="723" alt="max_array_main_asm2" src="https://github.com/user-attachments/assets/f177594d-5924-4c51-8718-92ee882a883c" />
+<img width="1201" height="723" alt="max_array_main_asm1" src="https://github.com/user-attachments/assets/a2ed0844-3792-4d46-a1b0-f619416c0ad2" />
+<img width="1201" height="723" alt="factorial_output" src="https://github.com/user-attachments/assets/eb3918c6-642b-4c80-904b-9a37e3ceb764" />
+<img width="1201" height="723" alt="factorial_main_asm" src="https://github.com/user-attachments/assets/ec3f157b-7b81-4106-bc48-7d9949b70b11" />
+<img width="1201" height="723" alt="max_array_output" src="https://github.com/user-attachments/assets/cd6e15e5-5e61-4f9e-bd86-6235d93aad5c" />
 
 ### 🧩 Instruction Decoding – (`factorial.c`)
 | Instruction      | Opcode  | rd  | rs1 | rs2 | funct3 | funct7  | Binary Instruction                    | Description           |
