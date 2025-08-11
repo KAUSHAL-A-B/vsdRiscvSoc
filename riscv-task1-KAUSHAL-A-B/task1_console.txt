@@ -1,0 +1,23 @@
+kaushal@kaushal-VirtualBox:~/riscv_toolchain$ which spike
+which riscv64-unknown-elf-gcc
+/home/kaushal/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/spike
+/home/kaushal/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-gcc
+kaushal@kaushal-VirtualBox:~/riscv_toolchain$ spike --version
+riscv64-unknown-elf-gcc --version
+spike: unrecognized option --version
+Try 'spike --help' for more information.
+riscv64-unknown-elf-gcc (SiFive GCC 8.3.0-2019.08.0) 8.3.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+kaushal@kaushal-VirtualBox:~/riscv_toolchain$ spike pk ./unique_test
+bbl loader
+RISC-V Uniqueness Check
+User: kaushal
+Host: kaushal-VirtualBox
+UniqueID: 0xb885903c7f7fb6d4
+GCC_VLEN: 5
+kaushal@kaushal-VirtualBox:~/riscv_toolchain$ 
+
+
