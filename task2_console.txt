@@ -1,0 +1,67 @@
+kaushal@kaushal-VirtualBox:~/riscv_toolchain$ spike pk ./factorial
+bbl loader
+=== RISC-V Proof Header ===
+User : kaushal
+Host : kaushal-VirtualBox
+MachineID : 9c55c8078cb74638
+BuildUTC : 2025-08-10T07:27:58Z
+BuildEpoch : 1754810878
+GCC : 8.3.0
+PointerBits: 64
+Program : factorial
+ProofID : 0xea8e712aa4869fab
+RunID : 0xd1fd3e15bc547271
+===========================
+n=12, n!=479001600
+kaushal@kaushal-VirtualBox:~/riscv_toolchain$ spike pk ./max_array
+bbl loader
+=== RISC-V Proof Header ===
+User : kaushal
+Host : kaushal-VirtualBox
+MachineID : 9c55c8078cb74638
+BuildUTC : 2025-08-10T07:30:00Z
+BuildEpoch : 1754811000
+GCC : 8.3.0
+PointerBits: 64
+Program : max_array
+ProofID : 0x6e7c01009e55b3cf
+RunID : 0x396cda49f189084d
+===========================
+Array length=9, Max=88
+kaushal@kaushal-VirtualBox:~/riscv_toolchain$ spike pk ./bubble_sort
+bbl loader
+=== RISC-V Proof Header ===
+User : kaushal
+Host : kaushal-VirtualBox
+MachineID : 9c55c8078cb74638
+BuildUTC : 2025-08-10T07:32:17Z
+BuildEpoch : 1754811137
+GCC : 8.3.0
+PointerBits: 64
+Program : bubble_sort
+ProofID : 0x27e30099a2d81b2f
+RunID : 0x6dcfb2c02019826d
+===========================
+Sorted: 1 2 3 4 5 6 7 8 9
+kaushal@kaushal-VirtualBox:~/riscv_toolchain$ spike pk ./bitops
+bbl loader
+=== RISC-V Proof Header ===
+User : kaushal
+Host : kaushal-VirtualBox
+MachineID : 9c55c8078cb74638
+BuildUTC : 2025-08-10T07:35:18Z
+BuildEpoch : 1754811318
+GCC : 8.3.0
+PointerBits: 64
+Program : bitops
+ProofID : 0x2f6f37a2c00bd21c
+RunID : 0xaecafdfc9acf4caa
+===========================
+x&y=0x05050024
+x|y=0xAFAFB7B5
+x^y=0xAAAAB791
+x<<3=0x2D2D2D28
+y>>2=0x03C3C48D
+kaushal@kaushal-VirtualBox:~/riscv_toolchain$ 
+
+
